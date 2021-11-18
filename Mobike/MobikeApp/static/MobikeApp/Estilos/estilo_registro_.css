@@ -1,0 +1,458 @@
+@media screen and (max-width: 500px){
+	body, main ,header ,.Mo2, article, p, h1,h2,h4,img,.menu{
+		width: 100%
+		}
+}
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body{
+
+	background: linear-gradient(to right, #0f0c29, #302b63, #24243e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+header{
+	width: auto;
+	height: 70px;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	margin-bottom: 20px;
+}
+
+.Nombrelogo{
+	position: absolute;
+	text-decoration: none;
+	text-align: left;
+	font-size: 4vw;
+	color: #fff;
+	font-family: 'Raleway', sans-serif;
+}
+
+
+h2{
+	font-weight: 400;
+	text-align: center;
+	padding: 20px 0;
+	font-size: 40px;
+	color: white;
+	font-family: 'Raleway', sans-serif;
+}
+
+
+
+.menu{
+
+	background-color: rgba(0,0,0,.2);
+}
+
+.menu ul{
+	text-align: right;
+}
+.menu ul li{
+	list-style: none;
+	display: inline-block;
+}
+.menu ul li a{
+	display: block;
+	text-decoration: none;
+	color: #fff;
+	font-size: 1.5vw;
+	font-family: 'Raleway',sans-serif;
+	padding: 15px;
+}
+
+.menu ul li a:hover{
+	background-color: #211b4385;
+}
+
+
+@media screen and (max-width: 360px){
+ .menu ul{
+ 	text-align: center;
+ 	width: 100%;
+ 	margin-top: 5%;
+ 	
+ }
+ h4{
+ 	text-align: center;
+ 	margin-top: -3%;
+ }
+
+ .menu ul li a{
+	font-size: 3vw;
+}
+.galeria{
+	grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
+
+}
+.close{
+	top: 20px;
+	right: 20px;
+}
+
+}
+
+.login-box
+{
+	width: 630px;
+	height: 800px;
+	background: linear-gradient(180deg, rgba(0,2,3,1) 5%, rgba(44,48,48,1) 40%);
+	left: 28%;
+	position: relative;
+	box-sizing: border-box;
+	margin-top: 7%;
+	padding: 7px 25px;
+	box-shadow: 2px 2px 2px 2px black;
+	border-radius: 0.30rem;
+}
+
+.login-box .avatar
+{
+	width: 70px;
+	height: 70px;
+	position: absolute;
+	top: -60px;
+	left: calc(50% - 30px);
+}
+
+.login-box h1
+{
+	margin: 0;
+	padding: 0 0 20px;
+	text-align: center;
+	font-size: 22px;
+	font-family: 'Ubuntu',sans-serif;
+}
+
+.login-box label
+{
+	color: #fff;
+	font-weight: bold;
+	text-align: center;
+	font-family: 'Ubuntu',sans-serif;
+}
+
+
+
+
+
+
+
+button[id="botones_registro_1"]{
+	width: 200px;
+	position: absolute;
+	display: inline-block;
+	margin: 15px;
+	top: 89%;
+	left: 12.5%;
+
+}
+
+button[id="botones_registro_2"]{
+	width: 200px;
+	position: absolute;
+	display: inline-block;
+	margin: 15px;
+	top: 89%;
+	left: 51%;
+
+}
+
+button[id="validar_tarjeta"]{
+	width: 173px;
+	position: absolute;
+	display: inline-block;
+	margin: 15px;
+	top: 62%;
+	left: 51%;
+}
+
+
+
+
+.login-box a
+{
+	position: relative;
+	text-decoration: none;
+	font-size: 12px;
+	line-height: 20px;
+	color: #fff;
+	left: 26%;
+	font-family: 'Ubuntu',sans-serif;
+}
+.login-box a:hover
+{
+	color: #CE7D35;	
+}
+
+
+.login-box label[for="id_rut_dv"]{ /*guion dv*/
+	visibility: hidden;
+
+}
+
+#guion{
+	position: absolute;
+	color: white;
+	top: 18%;
+	left: 37.5%;
+
+}
+/*Inputs*/
+
+.login-box input[type="text"]{ 
+	width: 250px;
+	background: rgb(0,2,3);
+	border: none;
+}
+
+.login-box label{ 
+	margin: 2px;
+	padding: 2px;
+}
+
+.login-box input[id="id_rut"]{ /*rut*/
+	position: absolute;
+	width: 185px;
+	top: 18%;
+	left: 7%;
+	background: rgb(0,2,2);
+	border: none;	
+}
+
+
+
+
+.login-box input[id="id_rut_dv"]{ /*dv*/
+	position: absolute;
+	width: 43px;
+	top: 18%;
+	left: 40%;
+	background: rgb(0,2,2);
+	border: none;	
+}
+
+.login-box input[id="id_nombre"]{ 
+	position: absolute;
+	width: 250px;
+	background: rgb(0,2,3);
+	border: none;
+	top: 18%;
+	left: 53%;	
+}
+
+
+
+
+.login-box input[id="id_apellido"]{ 
+	position: absolute;
+	width: 250px;
+	background: rgb(0,2,3);
+	border: none;
+	top: 29%;
+	left: 7%;	
+}
+
+.login-box input[id="id_direccion"]{ 
+	position: absolute;
+	width: 250px;
+	background: rgb(0,2,3);
+	border: none;
+	top: 40%;
+	left: 7%;	
+}
+
+.login-box select[id="id_comuna"]{ 
+	position: absolute;
+	width: 250px;
+	color: white;
+	background: rgb(0,2,3);
+	border: none;
+	top: 29%;
+	left: 53%;	
+}
+
+.login-box input[id="id_correo"]{ 
+	position: absolute;
+	width: 250px;
+	background: rgb(0,2,3);
+	border: none;
+	left: 53%;
+	top: 40%;
+		
+}
+
+.login-box select[id="id_banco"]{ 
+	position: absolute;
+	width: 250px;
+	color: white;
+	background: rgb(0,2,3);
+	border: none;
+	left: 53%;
+	top: 52%;
+}
+
+
+.login-box input[id="id_tarjeta_credito"]{ 
+	position: absolute;
+	width: 250px;
+	background: rgb(0,2,3);
+	border: none;
+	top: 52%;
+	left: 7%;	
+}
+
+.login-box input[id="id_mes_expiracion"]{ 
+	position: absolute;
+	width: 60px;
+	background: rgb(0,2,3);
+	border: none;
+	top: 64%;
+	left: 23%;	
+}
+
+.login-box input[id="id_anio_expiracion"]{ 
+	position: absolute;
+	width: 60px;
+	background: rgb(0,2,3);
+	border: none;
+	top: 64%;
+	left: 37%;	
+
+}
+
+.login-box input[id="id_contrasena"]{ 
+	position: absolute;
+	width: 250px;
+	color: white;
+	background: rgb(0,2,3);
+	border: none;
+	left: 7%;
+	top: 75%;	
+}
+
+.login-box input[id="id_confirmar_contrasena"]{ 
+	position: absolute;
+	width: 250px;
+	color: white;
+	background: rgb(0,2,3);
+	border: none;
+	left: 53%;
+	top: 75%;	
+}
+
+
+
+
+
+/*Labels*/
+.login-box label[for="id_rut"]{
+	position: absolute;
+	top: 14%;
+	left: 7%;
+
+}
+.login-box label[for="id_nombre"]{
+	position: absolute;
+	top: 14%;
+	left: 52%;
+}
+
+
+
+.login-box label[for="id_apellido"]{
+	position: absolute;
+	top: 25%;
+	left: 7%;
+}
+
+.login-box label[for="id_direccion"]{
+	position: absolute;
+	top: 36%;
+	left: 7%;
+}
+
+
+.login-box label[for="id_comuna"]{
+	position: absolute;
+	top: 25%;
+	left: 52%;
+}
+
+.login-box label[for="id_correo"]{
+	position: absolute;
+	top: 36%;
+	left: 52%;
+}
+
+
+.login-box label[for="id_banco"]{
+	position: absolute;
+	top: 48%;
+	left: 52%;
+}
+
+
+
+.login-box label[for="id_mes_expiracion"]{
+	position: absolute;
+	top: 60%;
+	left: 23%;
+}
+
+.login-box label[for="id_anio_expiracion"]{
+	position: absolute;
+	top: 60%;
+	left: 37%;
+}
+
+
+
+.login-box label[for="id_tarjeta_credito"]{
+	position: absolute;
+	top: 48%;
+	left: 7%;
+}
+
+
+.login-box label[for="id_contrasena"]{
+	position: absolute;
+	top: 71%;
+	left: 7%;
+}
+
+
+.login-box label[id="confirmar_contrasena"]{
+	position: absolute;
+	top: 71%;
+	left: 53%;
+
+}
+
+.login-box div[id="warning"]{
+	position: absolute;
+	top: 82%;
+	left: 5%;
+	width: 90%;
+	height: 5%;
+	color: #721c24;
+  	background-color: #f8d7da;
+  	border-color: #f5c6cb;
+  	border-radius: 0.30rem;
+  	display: none;
+
+}
+
+.login-box small[id="error_messages"]{
+	position: absolute;
+	top: 19%;
+	left: 29%;
+	color: #491217;
+	font-size: 17px;
+	font-family: 'Raleway', sans-serif;
+}

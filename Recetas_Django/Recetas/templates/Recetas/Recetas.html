@@ -1,0 +1,82 @@
+{% extends "Recetas/base.html" %}
+{%load static%}
+
+{% block contenido %}
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="{% static '/Recetas/Estilos/Estilo_Pagina_Web.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static '/Recetas/Estilos/Estilo_receta.css' %}">
+	<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@600&display=swap" rel="stylesheet">  
+
+
+		<br>
+		<div class="banner">
+			<img src="{% static '/Recetas/Imagenes/Banner_Madera.png' %}">
+		</div>
+		<h1>Conoce las recetas <br>de<br>nuestro País</h1>
+		<br> 	
+		
+	</header>
+
+    <h1></h1>
+
+	<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+		<ol class="carousel-indicators">
+		  <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+		  <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+		  <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+		</ol>
+
+		<div class="carousel-inner">
+		  <div class="carousel-item active">
+			<a href="../Menu/Entradas.html" target="_blank">
+			<img src="{% static '/Recetas/Imagenes/Entradas/palta reina.jpg' %}" class="d-block w-100" alt="...">
+			</a>
+			<div class="carousel-caption d-none d-md-block">
+			  <h5> Entradas</h5>
+			  <p>Conoce nuestras entradas</p>
+			</div>
+		  </div>
+
+		  <div class="carousel-item">
+			<a href="../Menu/Fondo.html" target="_blank">
+			<img src="{% static '/Recetas/Imagenes/Platos de Fondo/Curanto Chilote.jpg' %}"class="d-block w-100" alt="...">
+			</a>
+			<div class="carousel-caption d-none d-md-block">
+			  <h5>Platos de fondo</h5>
+			  <p>Aqui encontrarás nuestros platos de fondo</p>
+			</div>
+		  </div>
+
+		  <div class="carousel-item">
+			<a href="../Menu/Postres.html" target="_blank">
+			<img src="{% static '/Recetas/Imagenes/Postres/Mote con Huesillo.jpg' %}"class="d-block w-100" alt="...">
+			</a>
+			<div class="carousel-caption d-none d-md-block">
+			  <h5>Postres</h5>
+			  <p>Conoce nuestros postres</p>
+			</div>
+		  </div>
+		</div>
+
+
+		<a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+		  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		  <span class="sr-only">Previous</span>
+		</a>
+		<a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+		  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+		  <span class="sr-only">Next</span>
+		</a>
+	  </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+  {% endblock %}

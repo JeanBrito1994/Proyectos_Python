@@ -1,0 +1,59 @@
+{% extends "Recetas/base.html" %}
+{%load static%}
+
+{% block contenido %}
+        <link rel="stylesheet" href="{% static '/Recetas/Estilos/Estilo_Postres.css' %}">
+  
+
+        <br>
+        <div class="banner">
+            <img src="{% static '/Recetas/Imagenes/Banner_Madera.png' %}">
+        </div>
+        <h1>¡Conoce nuestras recetas!</h1>
+        <br>    
+        <body>
+   
+            <div class="galeria">
+                <div>
+                    <div class="contenedor-imagenes">
+                        <div class="imagen">
+                            <img src="{% static '/Recetas/Imagenes/Postres/Brazo de Reina.jpg' %}">
+                            <div class="overlay">
+                                <a href="">Brazo de Reina</a>
+                            </div>
+                        </div>     
+                        <div class="imagen">
+                            <img src="{% static '/Recetas/Imagenes/Postres/Empolvados.jpeg' %}">
+                            <div class="overlay">
+                                <a href="">Empolvados</a>
+                            </div>
+                        </div>   
+                        <div class="imagen">
+                            <img src="{% static '/Recetas/Imagenes/Postres/Leche Asada.jpg' %}">
+                            <div class="overlay">
+                                <a href="">Leche Asada</a>
+                            </div>
+                        </div>   
+                        <div class="imagen">
+                            <img src="{% static '/Recetas/Imagenes/Postres/Leche nevada.jpg' %}">
+                            <div class="overlay">
+                                <a href="">Leche Nevada</a>
+                            </div>
+                        </div>   
+                        <div class="imagen">
+                            <img src="{% static '/Recetas/Imagenes/Postres/Mote con Huesillo.jpg' %}">
+                            <div class="overlay">
+                                <a href="">Mote con Huesillo</a>
+                            </div>
+                        </div>   
+                        <div class="imagen">
+                            <img src="{% static '/Recetas/Imagenes/Postres/Sopaipillas Pasadas.jpg' %}">
+                            <div class="overlay">
+                                <a href="">Sopaipillas Pasadas</a>
+                            </div>
+                        </div>   
+                    </div>
+                </div>                                 
+            </div> 
+    </body>
+    {% endblock %}

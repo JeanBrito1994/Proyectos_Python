@@ -1,0 +1,118 @@
+@media screen and (max-width: 500px){
+	body, main ,header ,.Mo2, article, p, h1,h2,h4,img,.menu{
+		width: 100%
+		}
+}
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body{
+
+	background: linear-gradient(to right, #0f0c29, #302b63, #24243e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+header{
+	width: auto;
+	height: auto;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	margin-bottom: 20px;
+}
+
+.Nombrelogo{
+	position: absolute;
+	text-decoration: none;
+	text-align: left;
+	font-size: 4vw;
+	color: #fff;
+	font-family: 'Raleway', sans-serif;
+}
+
+h1{
+	font-weight: 400;
+	text-align: center;
+	margin-top: 1%;
+	padding: 20px 0;
+	font-size: 40px;
+	color: white;
+	font-family: 'Raleway', sans-serif;
+}
+
+h2{
+	font-weight: 400;
+	text-align: center;
+	padding: 20px 0;
+	font-size: 40px;
+	color: white;
+	font-family: 'Raleway', sans-serif;
+}
+
+
+
+.menu{
+
+	background-color: rgba(0,0,0,.2);
+}
+
+.menu ul{
+	text-align: right;
+}
+.menu ul li{
+	list-style: none;
+	display: inline-block;
+}
+.menu ul li a{
+	display: block;
+	text-decoration: none;
+	color: #fff;
+	font-size: 1.5vw;
+	font-family: 'Raleway',sans-serif;
+	padding: 15px;
+}
+
+.menu ul li a:hover{
+	background-color: #211b4385;
+}
+
+.form_buscador{
+	background-color: grey;
+	height: 50px;
+}
+
+.form_buscador input{
+	position: relative;
+	margin-top: 5px;
+	border-radius: 5px;
+	position: relative;
+	left: 9%;
+
+}
+
+.form_buscador label{
+	color: white;
+	position: relative;
+	left: 8%;
+}
+
+
+#btnBuscar{
+	position: relative;
+	left: 10%;
+	margin-top: 5px;
+}
+
+#tabla{
+	color: white;
+	text-align: center;
+	/*background-color: grey;*/
+}
+
+#encabezado{
+	position: relative;
+	text-align: center;
+}

@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" type="text/css" href="{% static '/MobikeApp/Estilos/estilo_registro.css'%}">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Raleway:wght@500&display=swap" rel="stylesheet">
+	<title>Home funcionario</title>
+</head>
+<body>
+	<div class="login-box">
+        <img class="avatar" src="{% static '/Mobikeapp/Images/Iconos/Login.png' %}"><br>
+        <h2>Registra tus datos</h2>
+        
+        <form action="" method="POST">
+            {% csrf_token %}
+ 
+            <label id="guion">-</label>
+            <label>Comunas</label>
+            <select class="browser-default custom-select" name="selector">
+                {% for comuna in comuna %}
+                <option value="{{ comuna.id_comuna }}">{{ comuna.nombre_comuna }} </option>
+                {% endfor %}
+            </select>
+            <label> </label>
+            <button class="btn btn-secondary" id="botones_registro" type="reset" value="Limpiar">Limpiar</button>
+            <button class="btn btn-secondary" id="botones_registro" type="submit" value="Guardar">Guardar</button>
+        </form>
+        <div class="cronometro">
+            <div id="hms"></div>
+            <div class="boton start"></div>        
+            <div class="boton stop"></div>
+            <div class="boton reiniciar"></div>
+        </div>
+    </div>
+</body>
+</html>

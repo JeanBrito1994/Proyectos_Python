@@ -1,0 +1,50 @@
+{% extends "Recetas/base.html" %}
+{%load static%}
+
+{% block contenido %}
+	<link rel="stylesheet" type="text/css" href="{% static '/Recetas/Estilos/formulario.css' %}">
+
+  
+<body>
+    
+
+    <div class="login-box">
+        <img class="avatar" src="{% static '/Recetas/Imagenes/Iconos/Login.png' %}"><br>
+        <h2>Modificar datos</h2>
+
+        {% if error %}
+            <p style="color:red;">{{ error }}</p>
+            
+        
+
+        <form action="" method="POST">
+            {% csrf_token %}
+			<table>
+			{{ form.as_table }}
+            </table>
+
+
+            <button class="limpiar" type="submit">
+                <a href="{% url 'formulario' %}">Volver</a>
+            </button>
+
+
+        {% else %}
+            <form action="" method="POST">
+                {% csrf_token %}
+                <table>
+                {{ form.as_table }}
+                </table>
+                <input class="limpiar" type="reset" value="Limpiar">
+                <input class="limpiar" type="submit" value="Guardar">
+        {% endif %}        
+                
+        </form>
+       
+        <br>
+        <br>
+        <br>
+    </div>
+    <script src="../JS/app.js"></script>
+</body>
+{% endblock %}

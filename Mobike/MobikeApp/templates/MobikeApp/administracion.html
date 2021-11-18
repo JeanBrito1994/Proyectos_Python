@@ -1,0 +1,84 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<title>Pagina Web</title>
+	<link rel="stylesheet" type="text/css" href="{% static '/MobikeApp/Estilos/estilo_administracion.css'%}">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Raleway:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<h4 class="Nombrelogo">Mobike</h4>
+		<nav class="menu">
+			<ul>
+				<li><a href="{% url 'Home' %}">Inicio</a></li>
+				<li><a href="{% url 'Login' %}">Login</a></li>
+				<li><a href="#">Acerca de</a></li>
+				<li><a href="#"></a></li>
+			</ul>
+		</nav>
+		<h1>Mobike Administracion</h1>
+	</header>
+	<div>
+		<div>
+			<form method="GET" class="form_buscador">
+				{% csrf_token %}
+				
+				<a href="#">Usuario: {{ user.nombre }}</a>
+				<br>
+				<a href="#">Cerrar sesion</a>
+				
+				<b>
+					<a href="{% url 'Registro' %}"></a> &nbsp;&nbsp; | &nbsp;&nbsp; 
+					<a href="{% url 'Login' %}"></a>
+				</b>
+				
+				<input type="text" name="buscar" placeholder="Ingrese id" value="{{request.GET.buscar}}">
+				<button class="btn btn-primary" id="btnBuscar" type="submit">Buscar</button>
+			</form>
+			</div>
+			<div class="lista_usuarios">
+				<table class="table" id="tabla">
+					<thead id="encabezado">
+						<tr>
+							<th> Rut </th>
+							<th> Dv </th>
+							<th> Nombre </th>
+							<th> Apellidos </th>
+							<th> Correo </th>
+							<th> Direccion </th>
+							<th> Tarjeta de Credito </th>
+							<th> Contraseña </th>
+							<th> Tipo de usuario </th>
+							<th> Estado </th>
+							<th><img id="basurero" src="{% static '/MobikeApp/Images/Iconos/basurero.png'%}"></th>
+							<th><img id="editar" src="{% static '/MobikeApp/Images/Iconos/editar.png'%}"></th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for usuario in usuario %}
+						<tr>
+							<td>{{usuario.rut}}</td>
+							<td>{{usuario.rut_dv}}</td>
+							<td>{{usuario.nombre}}</td>
+							<td>{{usuario.apellido}}</td>
+							<td>{{usuario.correo}}</td>
+							<td>{{usuario.direccion}}</td>
+							<td>{{usuario.tarjeta_credito}}</td>
+							<td>{{usuario.contrasena}}</td>
+							<td>{{usuario.tipousuario}}</td>
+							<td>{{usuario.estado}}</td>
+							<td><a href="{% url 'Eliminar_usuario' usuario.rut %}"><button class="btn btn-danger">Eliminar</button></a></td>
+							<td><a href="{% url 'Modificar' usuario.rut %}"><button class="btn btn-success">Modificar</button></a></td>
+						</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+			</div>	
+		</div>
+	</div>
+</body>
+<link rel="stylesheet" type="text/css" href="{% static 'MobikeApp/css/bootstrap.css' %}">
+</html>

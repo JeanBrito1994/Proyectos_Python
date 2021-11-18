@@ -1,0 +1,62 @@
+{% extends "Recetas/base.html" %}
+{%load static%}
+
+{% block contenido %}
+<body>
+    
+        <link rel="stylesheet" href="{% static '/Recetas/Estilos/Estilo_Entradas.css' %}">
+    
+        <br>
+        <div class="banner">
+            <img src="{% static '/Recetas/Imagenes/Banner_Madera.png' %}">
+        </div>
+        <h1>¡Conoce nuestras Recetas!</h1>
+        <br>        
+
+        <body>
+            
+      
+            <div class="galeria">
+                <div class="linea">
+                    <div class="contenedor-imagenes">
+                        <div class="imagen">
+                            <img src="{% static '/Recetas/Imagenes/Entradas/tomate relleno.jpg' %}">
+                            <div class="overlay">
+                                <a href="">Tomate Relleno</a>
+                            </div>
+                        </div>     
+                        <div class="imagen">
+                            <img src="{% static '/Recetas/Imagenes/Entradas/palta reina.jpg' %}">
+                            <div class="overlay">
+                                <a href="">Palta Reina</a>
+                            </div>
+                        </div>   
+                        <div class="imagen">
+                            <img src="{% static '/Recetas/Imagenes/Entradas/crema zapallo.jpg' %}">
+                            <div class="overlay">
+                                <a href="">Crema de Zapallo</a>
+                            </div>
+                        </div>   
+                        <div class="imagen">
+                            <img src="{% static '/Recetas/Imagenes/Entradas/crema tomate.jpg' %}">
+                            <div class="overlay">
+                                <a href="">Crema de Tomate</a>
+                            </div>
+                        </div>   
+                        <div class="imagen">
+                            <img src="{% static '/Recetas/Imagenes/Entradas/crema espinaca.jpg' %}">
+                            <div class="overlay">
+                                <a href="">Crema de Espinaca</a>
+                            </div>
+                        </div>   
+                        <div class="imagen">
+                            <img src="{% static '/Recetas/Imagenes/Entradas/champiñones rellenos.jpg' %}">
+                            <div class="overlay">
+                                <a href="">Champiñones Rellenos</a>
+                            </div>
+                        </div>   
+                    </div>
+                </div>                                 
+            </div> 
+        </body>
+    {% endblock %}

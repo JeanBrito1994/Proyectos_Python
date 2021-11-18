@@ -1,0 +1,88 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title>Pagina Web</title>
+    <link rel="stylesheet" type="text/css" href="{% static '/MobikeApp/Estilos/estilo_login_.css'%}">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Raleway:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h4 class="Nombrelogo">Mobike</h4>
+        <nav class="menu">
+            <ul>
+                <li><a href="{% url 'Home' %}">Inicio</a></li>
+                <li><a href="{% url 'Login' %}">Login</a></li>
+                <li><a href="#">Acerca de</a></li>
+            </ul>
+        </nav>
+        <h1>Bienvenido a Mobike</h1>
+        {% if messages %}
+        {% for msg in messages %}
+        {% if msg.level == DEFAULT_MESSAGE_LEVELS.WARNING %}
+        <div class="alert alert-warning" role="alert">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            {{msg}}
+        </div>
+        {% endif%}
+        {% if msg.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+        <div class="alert alert-success" role="alert">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            {{msg}}
+        </div>
+        {% endif %}       
+        {% endfor %}
+        {% endif %}
+
+
+    </header>
+    
+    <div class="panel_principal">
+        <div class="contenedor_pestañas">
+            <ul class="pestañas">
+                <li><a href="#usuario">Login usuario</a></li>
+                <li><a href="#funcionario">Login funcionario</a></li>
+            </ul>
+        </div>
+        <div id="usuario" class="login_usuario">
+            <img class="avatar" src="{% static '/MobikeApp/Images/Iconos/Login.png' %}">
+            <h2>Iniciar Sesion</h2>
+            <form method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="username">Correo electronico</label>
+                    <input type="email" name="correo" class="form-control" id="input_correo" placeholder="usuario@gmail.com" value="{{request.POST.correo}}">
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" name="contrasena" class="form-control" id="password" value="{{request.POST.contrasena}}">
+                </div>
+                <button id="boton" type="submit" class="btn btn-secondary">Iniciar Sesion</button>
+                <a href="{% url 'Registro' %}"><button id="boton" type="button" class="btn btn-secondary">Registrate</button></a>
+                <a class="recuperar_contraseña" href="#">Olvidaste tu contrasena</a>    
+            </form>
+        </div>
+        <div id="funcionario" class="login_funcionario">
+            <img class="avatar" src="{% static '/MobikeApp/Images/Iconos/Login.png' %}">
+            <h2>Iniciar Sesion</h2>
+            <form method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="username">Rut</label>
+                    <input type="text" name="rut" class="form-control" id="input_rut" placeholder="17911882" value="{{request.POST.rut}}">
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" name="contrasena_funcionario" class="form-control" id="password" value="{{request.POST.contrasena}}">
+                </div>
+                <button id="boton" type="submit" class="btn btn-secondary">Iniciar Sesion</button>
+                <a href="{% url 'Registro' %}"><button id="boton" type="button" class="btn btn-secondary">Registrate</button></a>
+                <a class="recuperar_contraseña" href="#">Olvidaste tu contrasena</a>
+            </form>
+        </div>
+    </div>
+</body>
+<link rel="stylesheet" type="text/css" href="{% static '/MobikeApp/css/bootstrap.css' %}">
+</html>

@@ -1,0 +1,404 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+@media screen and (max-width: 800px){
+	body, main , section, article, p, h1,h2,img .contenedor-imagen-menu , .logotipo, .contenedor-menu,
+	.navegacion, .navegacion ul li a , .submenu li a{
+		width: 100%
+		}
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing: border-box;
+}
+
+body
+{
+	background-color: rgba(0,0,0,1);
+
+}
+
+
+
+.contenedor-imagen-menu
+{
+	display: flex;
+	height: 200px;
+	width: 100%;
+	/* background-size: cover; */
+	background-image: url("../Imagenes/Comida_2.jpg");
+}
+
+
+.logotipo
+{
+	width: auto;
+	height: 200px;
+	display: block;
+	margin: 0 auto;
+	padding: 1% 1%;
+
+}
+
+.contenedor-menu
+{
+	background: #000000;
+}
+
+.navegacion
+{
+	height: 10%;
+	width: auto;
+	margin: 1% 2%;
+	background: #000000; 
+}
+
+.navegacion ul
+{
+	list-style: none;
+
+}
+
+.menu > li
+{
+	position: relative;
+	display: inline-block;
+	color: #fff;
+}
+
+.menu > li > a
+{
+	display: block;
+	padding: 5%;
+	text-align: center;
+	text-decoration: none;
+	font-family: 'Ubuntu',sans-serif;
+	color: #fff;
+	font-size: 18px;
+}
+
+.menu li > a:hover
+{
+	background: #4f2a1d;
+}
+
+
+.submenu
+{
+	position: absolute;
+	background: #EBDEF0;
+	height: auto;
+	width: 130%;
+	display: none;
+	font-family: 'Ubuntu',sans-serif;
+	font-size: 1vw;
+}
+
+.submenu li a
+{
+	display: block;
+	padding: 10%;
+	text-decoration: none;
+	color: #fff;
+	background: #000000;
+}
+
+.menu li:hover .submenu
+{
+	display: block;
+}
+
+.img0 img
+{
+	float: right;
+	margin: 6px 20px;
+}
+
+.img1 img
+{
+	float: right;
+	margin: 6px 20px;
+}
+
+.img2 img
+{
+	float: right;
+	margin: 6px 30px;
+}
+
+.img3 img
+{
+	float: left;
+	margin: 6px 45px;
+}
+
+.img4 img
+{
+	float: right;
+	margin: 6px 40px;
+}
+
+h1
+{
+	display: flex;
+	color: #fff;
+	text-align: center;
+	position: absolute;
+	padding: 0%;
+	margin: -18% 30%;
+	left: 4%;
+	text-decoration: none;
+	font-family: 'Dancing Script', cursive;
+	font-size: 4vw;
+}
+
+
+.banner
+{
+	display: flex;
+	height: auto;
+	width: auto;
+	justify-content: space-around;
+	background-size: cover;
+	margin-top: -1%;
+}
+
+.banner img
+{
+    max-width: 100%;
+	max-height: 100%;
+	justify-content: space-around;
+	
+}
+
+article
+{
+
+	text-align: center;
+	padding: 6%;
+	display: block;
+	text-decoration: none;
+	font-family: 'Amatic SC';
+}
+
+
+p{
+	background-position: bottom;
+	text-align: center;
+	padding: 5%;
+	display: block;
+	text-decoration: none;
+	font-family: 'Ubuntu',sans-serif;
+	font-size: 16px;
+	color: #fff;
+}
+
+main
+{
+	margin-top: -1%;
+}
+
+h2
+{
+
+
+	text-align: center;
+	margin-top: 15%;
+	padding: 0%;
+	margin: 0%;
+	width: 100%;
+	display: block;
+	text-decoration: none;
+	font-family: 'Ubuntu',sans-serif;
+	font-size: 29px;
+	color: #fff;
+}
+
+h3
+{
+
+	text-align: center;
+	padding: 5%;
+	display: block;
+	text-decoration: none;
+	font-family: 'Ubuntu',sans-serif;
+	font-size: 1vw;
+	color: #545558;
+}
+
+.Chile .Articulo1 .Imagen-Articulo1 img
+{
+	display: flex;
+	max-width: 100%;
+	max-height: 100%;
+	height: 200px;
+	width: 200px;
+	margin: auto;
+	justify-content: space-around;
+	background-size: cover;
+	border-radius: 100%;
+	border: 5px solid #666;
+}
+
+
+
+.Chile .Articulo2 .Imagen-Articulo2 img
+{
+	display: flex;
+	max-width: 100%;
+	max-height: 100%;
+	height: 200px;
+	width: 200px;
+	margin: auto;
+	justify-content: space-around;
+	background-size: cover;
+	border-radius: 100%;
+	border: 5px solid #666;
+}
+
+
+.Chile .Articulo3 .Imagen-Articulo3 img
+{
+	display: flex;
+	max-width: 100%;
+	max-height: 100%;
+	height: 200px;
+	width: 200px;
+	margin: auto;
+	justify-content: space-around;
+	background-size: cover;
+	border-radius: 100%;
+	border: 5px solid #666;
+}
+
+
+
+.Chile .Articulo4 .Imagen-Articulo4 img
+{
+	display: flex;
+	max-width: 100%;
+	max-height: 100%;
+	height: 200px;
+	width: 200px;
+	margin: auto;
+	justify-content: space-around;
+	background-size: cover;
+	border-radius: 100%;
+	border: 5px solid #666;
+}
+
+.Chile
+{
+	
+	display: flex;
+	text-align: center;
+	width: auto;
+	justify-content: center;
+	margin-top: 20px;
+}
+.Articulo1
+{
+	background: rgb(44,48,48);
+	background: radial-gradient(circle, rgba(44,48,48,1) 25%, rgba(0,2,3,1) 77%);
+	margin: 5px;
+	margin-bottom: 50px;
+	width: 300px;
+}
+.Articulo2
+{
+	background: rgb(44,48,48);
+	background: radial-gradient(circle, rgba(44,48,48,1) 25%, rgba(0,2,3,1) 77%);
+	margin: 5px;
+	margin-bottom: 50px;
+	width: 300px;
+}
+.Articulo3
+{
+	background: rgb(44,48,48);
+	background: radial-gradient(circle, rgba(44,48,48,1) 25%, rgba(0,2,3,1) 77%);
+	margin: 5px;
+	margin-bottom: 50px;
+	width: 300px;
+}
+.Articulo4
+{
+	background: rgb(44,48,48);
+	background: radial-gradient(circle, rgba(44,48,48,1) 25%, rgba(0,2,3,1) 77%);
+	margin: 5px;
+	margin-bottom: 50px;
+	width: 300px;
+}
+@media screen and (max-width: 400px)
+{
+	.img0 img
+	{
+		display: none;
+	}
+	.img01 img
+	{
+		display: none;
+	}
+	.img2 img
+	{
+		display: none;
+	}
+	.img3 img
+	{
+		display: none;
+	}
+	.img4 img
+	{
+		display: none;
+	}
+
+}
+
+
+
+footer{
+	margin-top: 5%;
+}
+
+.Imagen-Articulo1 img{
+	display: block;
+	position: relative;
+	height: 15%;
+	width: 15%;
+	left: 1%;
+	padding:auto;
+	margin: auto;
+}
+
+.acticulo-footer p{
+	padding: 10px;
+}
+
+footer article{
+	padding: 10px;
+}
+
+
+.credenciales{
+
+    margin: 7px;
+    height: 68px;
+	background-color:rgb(44,48,48);
+	background: radial-gradient(circle, rgba(44,48,48,1) 25%, rgba(0,2,3,1) 77%);
+	border-radius: 20%;
+    padding: 7px;
+}
+
+.credenciales > a{
+	font-size: 150%;
+	padding: 0%;
+	text-align: center;
+    position: relative;
+	text-decoration: none;
+	color: #fff;
+}

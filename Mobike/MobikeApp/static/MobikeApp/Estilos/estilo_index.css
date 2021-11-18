@@ -1,0 +1,348 @@
+@media screen and (max-width: 500px){
+	body, main ,header ,.Mo2, article, p, h1,h2,h4,img,.menu{
+		width: 100%
+		}
+}
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+#body1{
+
+	background-color: black;
+}
+
+header{
+	width: auto;
+	height: auto;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	margin-bottom: 20px;
+}
+
+.Nombrelogo{
+	position: absolute;
+	text-decoration: none;
+	text-align: left;
+	font-size: 4vw;
+	color: #fff;
+	font-family: 'Raleway', sans-serif;
+}
+
+h3{
+	font-weight: 400;
+	text-align: center;
+	padding: 20px 0;
+	font-size: 40px;
+	color: white;
+	font-family: 'Raleway', sans-serif;
+}
+
+
+
+.menu{
+
+	background-color: rgba(0,0,0,.2);
+}
+
+.menu ul{
+	text-align: right;
+}
+.menu ul li{
+	list-style: none;
+	display: inline-block;
+}
+.menu ul li a{
+	display: block;
+	text-decoration: none;
+	color: #fff;
+	font-size: 1.5vw;
+	font-family: 'Raleway',sans-serif;
+	padding: 15px;
+}
+
+.menu ul li a:hover{
+	background-color: #211b4385;
+}
+
+.carousel{
+	margin-top: -1%;
+}
+
+.carousel-inner img{
+	width: auto;
+	height: 650px;
+}
+
+.carousel-item img{
+	width: auto;
+	height: 650px;
+}
+
+
+
+
+.carousel-title{
+	display: block;
+	font-size: 3vw;
+	font-family: 'Raleway',sans-serif;
+	color: white;
+}
+
+#prev{
+	width: 35px;
+	height: 35px;
+
+}
+
+#next{
+	width: 35px;
+	height: 35px;
+
+}
+
+#imagen-gps{
+	width: 60px;
+	height: 60px;
+
+}
+
+
+.Mo3 img{
+	width: 100%;
+	height: 100%;
+}
+
+
+#galeri{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
+	width: 95%;
+	margin: auto;
+	grid-gap: 10px;
+	padding: 50px 0;
+	overflow: hidden;
+	background-color: black;
+}
+
+
+#galeri  a{
+	display: block;
+ 	position: relative;
+ 	overflow: hidden;
+ 	box-shadow: 0 0 6px rgba(0,0,0,.5);
+}
+
+
+#galeri >  a  img{
+	width: 100%;
+	vertical-align: top;
+	height: 300px;
+	object-fit: cover;
+	transition: transform 0.5s;
+
+}
+
+#galeri a:hover img{
+	filter: blur(2px);
+	transform: rotate(10deg) scale(1.3);
+
+}
+
+
+
+.linea1{
+	margin-top: 1%;
+	background-color: white;
+	size: 5px;
+	position: relative;
+	width: 95%;
+	margin-left: 2.5%;
+}
+
+#boton{
+	background-repeat: no-repeat;
+	background-image: url("../Images/abajo.png");
+	position: relative;
+	width: 67px;
+	height: 67px;
+	margin-top: -3%;
+	margin-left: 47.5%;
+	background-color: black;
+}
+
+
+
+.ligth-box{
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,.5);
+	transition: transform .3s ease-in-out;
+	width: 100%;
+	height: 100vh;
+	z-index: 1000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform: scale(0);
+
+}
+
+.ligth-box img .imgen{
+	width: 75vw;
+	max-height: 70vh;
+
+}
+
+
+
+.ligth-box:target{
+	transform: scale(1);
+}
+
+
+.close{
+	display: block;
+	position: absolute;
+	top: 30px;
+	right: 50px;
+	background: red;
+	text-decoration: none;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	border-radius: 50%;
+	font-family: 'Raleway',sans-serif;
+}
+
+
+.next{
+	display: block;
+	background-color: rgba(0,0,0,.2);
+	height: 50px;
+	width: 40px;
+	line-height: 30px;
+	text-decoration: none;
+	text-align: center;
+}
+
+
+
+.contenedor-imagen{
+	display: inline-block;
+}
+.grid1{
+	display: block;
+	float: left;
+	width: 50%;
+	height: 20%;
+}
+
+.grid2{
+	display: block;
+	float: right;
+	width: 50%;
+	height: 20%;
+	
+}
+.imagen-grid3{
+	width: 790px;
+	height: 551px;
+}
+
+.imagen-grid2{
+	width: 100%;
+	height: 890px;
+}
+
+
+
+.img1{
+	width: 100%;
+	height: auto;
+}
+
+.img2{
+	position: absolute;
+	width: 21%;
+	height: auto;
+	margin-left: 40%;
+	margin-top: 4%;
+
+}
+
+.titulo-footer1{
+	color: white;
+	position: absolute;
+	font-family: 'Raleway',sans-serif;
+	text-align: center;
+	margin-left: 40%;
+	margin-top: 2%;
+	font-size: 2vw;
+
+}
+
+
+
+.titulo-footer2{
+	color: white;
+	position: absolute;
+	font-family: 'Raleway',sans-serif;
+	text-align: center;
+	margin-left: 40%;
+	margin-top: -20%;
+	font-size: 2vw;
+
+}
+
+.parrafo{
+	font-family: 'Raleway',sans-serif;
+	position: relative;
+	color: white;
+	text-align: center;
+	margin-left: 1%;
+	margin-top: -6%;
+}
+
+.contenedor_social{
+	display: inline-flex;
+	position: absolute;
+	margin-left: 33%;
+	margin-top: -16%;
+}
+
+.contenedor_social a img{
+	padding: 10px;
+}
+
+
+@media screen and (max-width: 360px){
+ .menu ul{
+ 	text-align: center;
+ 	width: 100%;
+ 	margin-top: 5%;
+ 	
+ }
+ h4{
+ 	text-align: center;
+ 	margin-top: -3%;
+ }
+
+ .menu ul li a{
+	font-size: 3vw;
+}
+.galeria{
+	grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
+
+}
+.close{
+	top: 20px;
+	right: 20px;
+}
+
+}
+

@@ -1,0 +1,67 @@
+{% extends "Recetas/base.html" %}
+{%load static%}
+
+{% block contenido %}
+		<br>
+		<div class="banner">
+			<img src="{% static '/Recetas/Imagenes/Banner_Madera.png' %}">
+		</div>
+		<h1>Conoce las recetas <br>de<br>nuestro País</h1>
+		<br> 	
+		
+	<main>
+		<section class="Chile">
+			<section class="Articulo1">
+				<h2> San Pedro de Atacama</h2>
+
+				<h3>Jean Pierre Brito<br>01 de Diciembre 2020</h3>
+				<div class="Imagen-Articulo1">
+					<img src="{% static '/Recetas/Imagenes/Regiones/Atacama.jpg' %}">
+				</div>
+				<article>
+					<p>La gran variedad de platillos que ofrece Santiago de Chile deriva de la fusión de diversas tradiciones culinarias, tanto de los hábitos alimenticios indígenas con productos como el choclo (elote o maíz), la papa, el zapallo (especie de calabaza), el ají (chile) y los frijoles o porotos, como de la herencia gastronómica española con la carne de cerdo, pollo, trigo y res.
+					</p>
+				</article>
+			</section>
+			<section class="Articulo2">
+				<h2> Santiago de Chile</h2>
+				<h3> Claudio Vargas<br>15 de Febrero 2021 </h3>
+				<div class="Imagen-Articulo2">
+					<img src="{% static '/Recetas/Imagenes/Regiones/Santiago.jpg' %}">
+				</div>
+				
+				<article>
+					
+					<p>Comida típica de San Pedro de Atacama, Chile.<br>En San Pedro de Atacama existe una amplia oferta gastronómica donde destacan ingredientes como carne de llama, pimientos picantes y algarrobo<br>En San Pedro de Atacama podrás probar la Patasca, un guisado picante preparado con maíz, cordero en trozos, vísceras de res, ají amarillo (pimiento), charqui (carne seca), papa, calabaza y condimentos.
+					</p>
+				</article>
+			</section>
+			<section class="Articulo3">
+				<h2> Isla de Pascua</h2>
+				<h3> Diego Benavides <br>22 de septiembre 2020</h3>
+				<div class="Imagen-Articulo3">
+					<img src="{% static '/Recetas/Imagenes/Regiones/Isla de Pascua.jpg' %}">
+				</div>
+				
+				<article>
+					
+					<p>La comida tipica de Isla de Pascua está basada principalmente en productos marinos, como pescados entre los que destacan el atún, el mahi mahi, la sierra o el kana kana y mariscos como la langosta, los camarones y el rape rape, un tipo de langosta más pequeña y nativa de la isla.
+					</p>
+				</article>
+			</section>
+			<section class="Articulo4">
+				<h2> Torres del Paine</h2>
+				<h3> Matias Bermedo <br>18 de septiembre 2020 </h3>
+				<div class="Imagen-Articulo4">
+					<img src="{% static '/Recetas/Imagenes/Regiones/Torres del Paine.jpg' %}">
+				</div>
+				<article>
+					<p>Típica comida chilena patagonica.<br>Diversidad de platos, de alta calidad, mariscos, pescados, corderos deliciosamente preparados y presentados. Acompañados de guarniciones diferentes, preparados con condimentos especiales. Excelente atención. Fogón de res y Cordero. Carta de vinos de alta calidad.
+					</p>
+				</article>
+			</section>
+		</section>
+	</main>
+</body>
+
+{% endblock %}

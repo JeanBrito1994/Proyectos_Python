@@ -1,0 +1,59 @@
+{% extends "Recetas/base.html" %}
+{%load static%}
+
+{% block contenido %}
+        <link rel="stylesheet" href="{% static '/Recetas/Estilos/Estilo_Fondos.css' %}">
+      
+
+        <br>
+        <div class="banner">
+            <img src="{% static '/Recetas/Imagenes/Banner_Madera.png' %}">
+        </div>
+        <h1>¡Conoce nuestras Recetas!</h1>
+        <br>    
+        <body>
+  
+            <div class="galeria">
+                <div class="linea">
+                    <div class="contenedor-imagenes">
+                        <div class="imagen">
+                            <img src="{% static '/Recetas/Imagenes/Platos de Fondo/Chairo.jpg' %}">
+                            <div class="overlay">
+                                <a href="">Chairo</a>
+                            </div>
+                        </div>     
+                        <div class="imagen">
+                            <img src="{% static '/Recetas/Imagenes/Platos de Fondo/Porotos con Rienda.jpg' %}">
+                            <div class="overlay">
+                                <a href="">Porotos con Rienda</a>
+                            </div>
+                        </div>   
+                        <div class="imagen">
+                            <img src="{% static '/Recetas/Imagenes/Platos de Fondo/Empanadas de Vacuno.jpg' %}">
+                            <div class="overlay">
+                                <a href="">Empanadas</a>
+                            </div>
+                        </div>   
+                        <div class="imagen">
+                            <img src="{% static '/Recetas/Imagenes/Platos de Fondo/Paila Marina.jpg' %}">
+                            <div class="overlay">
+                                <a href="">Paila Marina</a>
+                            </div>
+                        </div>   
+                        <div class="imagen">
+                            <img src="{% static '/Recetas/Imagenes/Platos de Fondo/ceviche de merluza.jpg' %}">
+                            <div class="overlay">
+                                <a href="">Ceviche de Merluza</a>
+                            </div>
+                        </div>   
+                        <div class="imagen">
+                            <img src="{% static '/Recetas/Imagenes/Platos de Fondo/Asado de Cordero.jpg' %}">
+                            <div class="overlay">
+                                <a href="">Asado de Cordero</a>
+                            </div>
+                        </div>   
+                    </div>
+                </div>                                 
+            </div> 
+        </body>
+{% endblock %}

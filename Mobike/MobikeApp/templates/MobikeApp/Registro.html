@@ -1,0 +1,292 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title>Pagina Web</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'Mobikeapp/Estilos/estilo_registro_.css '%}">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Raleway:wght@500&display=swap" rel="stylesheet">     
+</head>
+<body>
+    <header>
+        <h4 class="Nombrelogo">Mobike</h4>
+        <nav class="menu">
+            <ul>
+                <li><a href="{% url 'Home' %}">Inicio</a></li>
+                <li><a href="{% url 'Login' %}">Login</a></li>
+                <li><a href="#">Acerca de</a></li>
+            </ul>
+        </nav>
+        {% if messages %}
+        {% for msg in messages%}
+        {% if msg.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+        <div class="alert alert-success" role="alert" id="alerta">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            {{msg}}
+        </div>
+        {% endif %}
+        {% endfor %}
+        {% endif %}
+    </header>
+    <div class="login-box">
+        <img class="avatar" src="{% static '/Mobikeapp/Images/Iconos/Login.png' %}"><br>
+        <h2>Registra tus datos</h2>
+        <form action="" method="POST" id="formulario">
+            {% csrf_token %}
+            {{ form }}
+            <label id="guion">-</label>
+            <button class="btn btn-secondary" id="validar_tarjeta" >Validar Tarjeta</button>
+            <label id="confirmar_contrasena">Confirmar contraseña:</label>
+            <input id="id_confirmar_contrasena" type="password" name="confirmar_contrasena" class="form-control">
+            <div id="warning" class="form-text text-muted">
+                <Strong><small id="error_messages"></small></Strong>
+            </div>
+            <button class="btn btn-secondary" id="botones_registro_1" type="reset" value="Limpiar">Limpiar</button>
+            <button class="btn btn-secondary" id="botones_registro_2" type="submit" value="Guardar">Guardar</button>
+        </form>
+    </div>
+    <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+</body>
+<link rel="stylesheet" type="text/css" href="{% static '/MobikeApp/css/bootstrap.css' %}">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+        //------------------ SOLO NUMEROS ------------------//
+        $(document).ready(function (){
+            $('#id_rut').keyup(function (){
+                var rut = $('#id_rut').val();
+                var numeros = /([0-9])$/;
+                this.value = (this.value + '').replace(/[^0-9]/g, '');
+
+                if (!numeros.test(rut)) {
+                    $('#error_messages').show();
+                    $('#warning').show();
+                    $('#error_messages').text("Solo puedes ingresar Numeros");
+                }else if(numeros.test(rut)){
+                    $('#error_messages').hide();
+                    $('#warning').hide();
+                    
+                }
+
+
+                var secuencia = [2,3,4,5,6,7,2,3];
+                var sum = 0;
+                for (var i=rut.length - 1; i >=0; i--) {
+                    var d = rut.charAt(i)
+                    sum += new Number(d)*secuencia[rut.length - (i + 1)];
+                };
+                var rest = 11 - (sum % 11);
+                // si es 11, retorna 0, sino si es 10 retorna K,
+                // en caso contrario retorna el numero
+                if (rest === 11) {
+                    $('#id_rut_dv').val('0');
+                }else if(rest === 10){
+                    $('#id_rut_dv').val('K');
+                }else{
+                    $('#id_rut_dv').val(rest);
+                }
+
+            });
+        });
+
+        $(document).ready(function (){
+            $('#id_rut_dv').keyup(function (){
+                var dv = $('#id_rut_dv').val();
+                var numeros = /([k/K/0-9])$/;
+                this.value = (this.value + '').replace(/[^k/K/0-9]/g, '');
+
+                if (!numeros.test(dv)) {
+                    $('#error_messages').show();
+                    $('#warning').show();
+                    $('#error_messages').text("Solo puedes ingresar Numeros");
+                }else if(numeros.test(dv)){
+                    $('#error_messages').hide();
+                    $('#warning').hide();
+                }
+            });
+        });
+
+        $(document).ready(function (){
+            $('#id_mes_expiracion').keyup(function (){
+                var mes = $('#id_mes_expiracion').val();
+                var numeros = /([0-9])$/;
+                this.value = (this.value + '').replace(/[^0-9]/g, '');
+
+                if (!numeros.test(mes)) {
+                    $('#error_messages').show();
+                    $('#warning').show();
+                    $('#error_messages').text("Solo puedes ingresar Numeros");
+                }else if(numeros.test(mes)){
+                    $('#error_messages').hide();
+                    $('#warning').hide();
+                }
+            });
+        });
+
+
+
+        $(document).ready(function (){
+            $('#id_anio_expiracion').keyup(function (){
+                var anio = $('#id_anio_expiracion').val();
+                var numeros = /([0-9])$/;
+                this.value = (this.value + '').replace(/[^0-9]/g, '');
+
+                if (!numeros.test(anio)) {
+                    $('#error_messages').show();
+                    $('#warning').show();
+                    $('#error_messages').text("Solo puedes ingresar Numeros");
+                }else if(numeros.test(anio)){
+                    $('#error_messages').hide();
+                    $('#warning').hide();
+                }
+            });
+        });
+
+
+        $(document).ready(function (){
+            $('#id_tarjeta_credito').keyup(function (){
+                var tarjeta = $('#id_tarjeta_credito').val()
+                var numeros = /([0-9])$/;
+                this.value = (this.value + '').replace(/[^0-9]/g, '');
+
+                 if (!numeros.test(tarjeta)) {
+                    $('#error_messages').show();
+                    $('#warning').show();
+                    $('#error_messages').text("Solo puedes ingresar Numeros");
+                }else if(numeros.test(tarjeta)){
+                    $('#error_messages').hide();
+                    $('#warning').hide();
+                }
+            });
+        });
+
+
+        //------------------ SOLO LETRAS ------------------//
+        $(document).ready(function (){
+            $('#id_nombre').keyup(function (){
+                var nombre = $('#id_nombre').val()
+                var letras = /[ a-zA-Z]$/;
+                this.value = (this.value + '').replace(/[^ a-zA-Z]+/g, '');
+
+                if (!letras.test(nombre)){
+                    $('#error_messages').show();
+                    $('#warning').show();
+                    $('#error_messages').text("Solo puedes ingresar letras");
+                }else if(letras.test(nombre)){
+                    $('#error_messages').hide();
+                    $('#warning').hide();
+                }
+            });
+        });
+
+        $(document).ready(function (){
+            $('#id_apellido').keyup(function (){
+                var apellido = $('#id_apellido').val()
+                var letras = /[ a-zA-Z]$/;
+                this.value = (this.value + '').replace(/[^ a-zA-Z]+/g, '');
+
+                if (!letras.test(apellido)){
+                    $('#error_messages').show();
+                    $('#warning').show();
+                    $('#error_messages').text("Solo puedes ingresar letras");
+                }else if(letras.test(apellido)){
+                    $('#error_messages').hide();
+                    $('#warning').hide();
+                }
+            });
+        });
+
+
+        //------------------ COMBOBOX ------------------//
+        $(document).ready(function (){
+            $('#error_messages').hide();
+            $('#warning').hide();
+            $('#id_comuna').on("click", function(){
+                if ($('#id_comuna').val() == "") {
+                    $('#error_messages').show();
+                    $('#warning').show();
+                    $('#error_messages').text("Debes seleecionar una Comuna");
+                }else{
+                    $('#error_messages').hide();
+                    $('#warning').hide();
+                }
+
+            });
+            
+        });
+
+
+        $(document).ready(function (){
+            $('#error_messages').hide();
+            $('#warning').hide();
+            $('#id_banco').on("click", function(){
+                if ($('#id_banco').val() == "") {
+                    $('#error_messages').show();
+                    $('#warning').show();
+                    $('#error_messages').text("Debes seleecionar un Banco");
+                }else{
+                    $('#error_messages').hide();
+                    $('#warning').hide();
+                }
+
+            });
+            
+        });
+
+        //------------------ CONTRASEÑAS VALIDAS ------------------//
+         $(document).ready(function (){
+            $('#error_messages').hide();
+            $('#warning').hide();
+            $('#id_confirmar_contrasena').keyup(function (){
+                var password1 = $('#id_contrasena').val();
+                var password2 = $('#id_confirmar_contrasena').val();
+
+                if (password1 != password2){
+                    $('#error_messages').show();
+                    $('#warning').show();
+                    $('#error_messages').text("Las contraseñas NO coinciden");
+                }else if(password1 == password2){
+                    $('#error_messages').hide();
+                    $('#warning').hide();
+                }
+            }); 
+        });
+
+
+
+        //------------------ LIMPIAR TODO THE RIAL ------------------//
+         $(document).ready(function (){
+            $('#botones_registro_1').on("click", function(){
+            $('#error_messages').hide();
+            $('#warning').hide();    
+
+            });
+            
+        });
+
+
+
+        $(document).ready(function (){
+            $('#validar_tarjeta').on("click", function(){
+                var numeros_tarjetas = $('#id_tarjeta_credito').value();
+
+                if (numeros_tarjetas.length < 16) {
+                    $('#error_messages').show();
+                    $('#warning').show(); 
+                }else{
+
+                }
+
+
+            });
+            
+        });        
+    </script>
+</html>

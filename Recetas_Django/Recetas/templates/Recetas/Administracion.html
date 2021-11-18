@@ -1,0 +1,29 @@
+{% extends "Recetas/base.html" %}
+{%load static%}
+
+{% block contenido %}
+
+	<link rel="stylesheet" type="text/css" href="{% static '/Recetas/Estilos/Estilo_Administracion.css' %}">
+
+            <div class="banner">
+				<img src="{% static '/Recetas/Imagenes/Banner_Madera.png' %}">
+			</div>
+		<h1>Adminstración de Recetas</h1>
+		<br>	
+
+	
+		<main>
+			<div class="contenedor_pestañas">
+				<ul class="pestañas">
+					<li><a href="{% url 'listado' %}">Listar Usuarios</a></li>
+					<li><a href="#agregar">Mis Receta</a></li>
+					
+				</ul>
+			</div>
+		
+
+		
+			
+		</main>
+
+		{% endblock %}

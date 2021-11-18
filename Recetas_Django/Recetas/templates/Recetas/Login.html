@@ -1,0 +1,47 @@
+{% extends "Recetas/base.html" %}
+{%load static%}
+
+{% block contenido %}
+	<link rel="stylesheet" type="text/css" href="{% static '/Recetas/Estilos/Estilo_Login.css' %}"> 
+        
+<body>
+
+    <div class="login-box">
+        <img class="avatar" src="{% static '/Recetas/Imagenes/Iconos/Login.png' %}">
+        <h2>Iniciar Sesión</h2>
+
+        {% if error %}
+            <p style="color:red;">{{ error }}</p>
+        {% endif %}
+
+
+        <form method="POST">
+            {% csrf_token %}
+            <label >Usuario</label>
+            <input type="text" placeholder="usuario@elgourmetchileno.cl" id="usuario" name ="username">
+
+            <label >Contraseña</label>
+            <input type="password" placeholder="Contraseña" id="contraseña" name="password">
+
+
+            <button class="boton" type="submit">
+                <a onclick="return validarlogin();">Iniciar Sesión</a>
+            </button>
+        
+            <button class="boton" type="submit">
+                <a href="{% url 'formulario' %}">Registrate</a>
+            </button>
+            
+            
+            <a href="">Olvidaste tu contraseña</a> <br>
+          
+        </form>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+    <script src="../JS/login.js"></script>
+</body>
+{% endblock %}

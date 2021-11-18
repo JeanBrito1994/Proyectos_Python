@@ -1,0 +1,49 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrendar bicicleta</title>
+    <link rel="stylesheet" type="text/css" href="{% static '/MobikeApp/Estilos/estilo_home_.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Raleway:wght@500&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="{% static '/MobikeApp/JS/Cronometro.js'%}"></script>
+    
+</head>
+<body>
+    <header>
+        
+        <h4 class="Nombrelogo">Mobike</h4>
+        <nav class="menu">
+            <ul>
+                <li><a href="{% url 'Home' %}">Inicio</a></li>
+                <li><a href="{% url 'Login' %}">Login</a></li>
+                <li><a href="#">Menu</a>
+                    <ul class="submenu">
+                        <li><a href="#">Editar Perfil</a></li>
+                        <li><a href="{% url 'Home'%}">Cerrar Sesion</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <h1>Home</h1>
+    </header>
+    <div id="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d26632.62941217895!2d-70.5654372!3d-33.4472567!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662ce6aa173a115%3A0x14eaa870edb3c922!2sLa%20Reina%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses-419!2scl!4v1605468168422!5m2!1ses-419!2scl" width="800" height="600" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div>
+    <div class="cronometro">
+        <div id="hms"></div>
+        <button class="boton_start">Iniciar</button></div>        
+        <button class="boton_stop">Parar</button>
+        <button class="boton_reiniciar">Reiniciar</button>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>  
+</body>
+<link rel="stylesheet" type="text/css" href="{% static '/MobikeApp/css/bootstrap.css' %}">
+</html>

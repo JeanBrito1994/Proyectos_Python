@@ -1,0 +1,53 @@
+{% extends "Recetas/base.html" %}
+{%load static%}
+
+{% block contenido %}
+<link rel="stylesheet" type="text/css" href="{% static '/Recetas/Estilos/Estilo_listado.css' %}">
+
+<div class="banner">
+    <img src="{% static '/Recetas/Imagenes/Banner_Madera.png' %}">
+</div>
+<h1>Listado de usuarios</h1>
+<br>
+<br>
+
+<div id="buscar">
+<form action="" method="GET">
+    {% csrf_token %}
+    <input type="text" name="buscar" placeholder="Nombre de usuario" value="{{request.GET.buscar}}">
+	<button class="btn btn-primary" id="btnBuscar" type="submit">Buscar</button>
+
+</form>
+</div>
+
+<div id="cuerpo"> 
+    <table id="tabla">
+        <thead id="encabezado">
+            <tr>
+                <th> Nombre Usuario </th>
+                <th> Nombre </th>
+                <th> Apellido </th>
+                <th> Email </th>
+                <th><img id="basurero" src="{% static '/Recetas/Imagenes/Iconos/basurero.png'%}"></th>
+                <th><img id="editar" src="{% static '/Recetas/Imagenes/Iconos/editar.png'%}"></th>
+
+            </tr>
+        </thead>
+        <tbody>
+            {% for usuario in usuario %}
+            <tr>
+                <td>{{usuario.username}}</td>
+                <td>{{usuario.first_name}}</td>
+                <td>{{usuario.last_name}}</td>
+                <td>{{usuario.email}}</td>
+                <td><a href="{% url 'Eliminar_usuario' usuario.username %}"><button id="boton_accion" class="btn btn-danger">Eliminar</button></a></td>
+				<td><a href="{% url 'modificar' usuario.username %}"><button id="boton_accion" class="btn btn-success">Modificar</button></a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+
+	
+{% endblock %}

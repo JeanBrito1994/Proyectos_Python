@@ -1,0 +1,170 @@
+@media screen and (max-width: 500px){
+	body, main ,header ,.Mo2, article, p, h1,h2,h4,img,.menu{
+		width: 100%
+		}
+}
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body{
+
+	background: linear-gradient(to right, #0f0c29, #302b63, #24243e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+header{
+	
+	width: auto;
+	height: auto;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	margin-bottom: 20px;
+}
+
+.Nombrelogo{
+	position: absolute;
+	text-decoration: none;
+	text-align: left;
+	font-size: 4vw;
+	color: #fff;
+	font-family: 'Raleway', sans-serif;
+}
+
+h1{
+	font-weight: 400;
+	text-align: center;
+	margin-top: 1%;
+	padding: 20px 0;
+	font-size: 40px;
+	color: white;
+	font-family: 'Raleway', sans-serif;
+}
+
+h2{
+	font-weight: 400;
+	text-align: center;
+	padding: 20px 0;
+	font-size: 40px;
+	color: white;
+	font-family: 'Raleway', sans-serif;
+}
+
+
+.menu{
+
+	background-color: rgba(0,0,0,.2);
+}
+
+.menu ul{
+	text-align: right;
+}
+.menu ul li{
+	list-style: none;
+	display: inline-block;
+}
+.menu ul li a{
+	display: block;
+	text-decoration: none;
+	color: #fff;
+	font-size: 1.5vw;
+	font-family: 'Raleway',sans-serif;
+	padding: 15px;
+}
+
+.menu ul li a:hover{
+	background-color: #211b4385;
+}
+
+
+.submenu
+{
+	position:absolute;
+	width: 200px;
+	height: 50px;
+	right: 0%;
+	display: none;
+}
+
+.submenu li a
+{
+	display: block;
+	text-decoration: none;
+	color: #fff;
+	list-style: none;
+	font-family: 'Raleway',sans-serif;
+	text-align: left;
+	background: rgba(0,0,0,0.2);
+	width: 200px;
+	height: 70px;
+}
+
+.menu li:hover .submenu
+{
+	display: block;
+}
+
+
+#map{
+	margin-top: 3%;
+	display: block;
+    height: auto;
+    width: 100%;
+}
+iframe{
+	position: relative;
+	left: 48%;
+}
+
+
+.cronometro{
+    width:17%;
+    height:30%;
+    top:50%;
+    left:20%;
+    position:absolute;
+    margin-top:-50px;
+    margin-left:-100px;
+    text-align:center;
+    font-family: 'Raleway',sans-serif;
+} 
+
+.boton_start{
+	display:inline;
+	width:90px;
+	height:32px;
+	position:relative;
+	left: -31%;
+	font-family: 'Raleway',sans-serif;
+}
+
+.boton_stop{
+	display:inline;
+	width:90px;
+	height:32px;
+	position:relative;
+	left: 23%;
+	font-family: 'Raleway',sans-serif;
+}
+
+.boton_reiniciar{
+	display:inline;
+	width:90px;
+	height:32px;
+	left: 25%;
+	position:relative;
+	font-family: 'Raleway',sans-serif;
+}
+
+#hms{
+    height:68px;
+    padding:5px 0;
+    margin: 5%;
+    font-size:50px;
+    color:#000;
+    font-family: alarm;  
+ }
+

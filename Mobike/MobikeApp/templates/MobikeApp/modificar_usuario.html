@@ -1,0 +1,48 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title>Pagina Web</title>
+    <link rel="stylesheet" type="text/css" href="{% static '/Mobikeapp/Estilos/estilo_registro.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Raleway:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h4 class="Nombrelogo">Mobike</h4>
+        <nav class="menu">
+            <ul>
+                <li><a href="{% url 'Home' %}">Inicio</a></li>
+                <li><a href="{% url 'Login' %}">Login</a></li>
+                <li><a href="#">Acerca de</a></li>
+            </ul>
+        </nav>
+        <h1>Bienvenido a Mobike</h1>
+        <br>    
+        
+    </header>
+    <div class="login-box">
+        <img class="avatar" src="{% static '/Mobikeapp/Images/Iconos/Login.png' %}"><br>
+        <h2>Modifica tus datos</h2>
+        
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{ form }}
+            <label id="guion">-</label>
+            <button class="btn btn-secondary" id="botones_registro" type="reset" value="Limpiar">Limpiar</button>
+            <button class="btn btn-secondary" id="botones_registro" type="submit" value="Guardar">Guardar</button>
+        </form>
+        {{ mensaje }}
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+</body>
+<link rel="stylesheet" type="text/css" href="{% static '/MobikeApp/css/bootstrap.css' %}">
+</html>
