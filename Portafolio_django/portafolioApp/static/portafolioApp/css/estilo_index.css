@@ -1,0 +1,196 @@
+*{
+    font-family: 'Varela Round', sans-serif;
+}
+
+a:hover{
+    color: #EA8E3C;
+      
+  }
+
+a{
+    text-decoration: none;
+    border: none;
+    
+    color: rgb(73, 72, 72);
+    
+}
+
+header{
+    background: linear-gradient(to right, #EA8E3C, #EA9E3C, #EAB871);
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+body{
+    padding-top: 80px;
+    margin: 0;
+    background: linear-gradient(to right, #f1ebea, #f7e2c7, #9b948b);
+}
+
+.menu{
+    width: 100%;
+    display: inline-flex;
+}
+
+.menu ul{
+    text-align: right;
+    margin-top: 2%;
+    width: 83%;
+}
+
+.menu ul li{
+	display: inline-block;
+    margin-left: 2%;
+    font-size: 120%;
+}
+
+
+
+.boton_descargar{
+   
+    height:60px; 
+    width:120px; 
+    margin: -20px -50px; 
+    position:relative;
+    top:50%; 
+    left:50%;   
+    font-size: 15px;
+    color: #fff;
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+    border-radius: 1rem;
+    }
+
+
+    .boton_descargar:before {
+        content:"";
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 0px;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.1);
+        transition: all 1s ease;
+        display: flex;
+      }
+
+      .boton_descargar:hover:before {
+      width: 100%;
+      }
+
+.Imagen_acerca{
+    max-width: 30%;
+    max-height: 30%;
+    margin: 1% 2% 0% 14%;
+    display: inline-flex;
+    border-radius: 5%;
+}
+#acerca_de_descripcion{
+padding: 7% 0% 0% 10%;
+font-size: 120%;
+}
+
+
+#acerca_de{
+    display: inline-flex;
+    margin-bottom: 10%;
+}
+
+
+
+footer{
+    background: linear-gradient(to right, #EA8E3C, #EA9E3C, #EAB871);
+    width: 100%;
+    min-height: 5rem;
+}
+
+
+h1, h2{
+    text-align: center;
+}
+
+#proyecto, #formacion, #contacto{
+margin-bottom: 10%;
+margin-top: 10%;
+}
+
+#skill{
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 10%;
+}
+
+#front, #back, #otros{
+    background-color: #f37609;
+    text-align: center;
+    margin-left: 2%;
+    margin-right: 2%;
+    min-height: 22rem;
+    width: 25%;
+    border-radius: 10%;
+    box-shadow: 0.3rem 0.3rem #9b948b;
+}
+
+#creado{
+    text-align: center;
+    margin: 0%;
+    padding-bottom: 2%;
+}
+
+.img_link, .img_git{
+
+    max-width: 5%;
+    max-height: 5%;
+}
+
+#img_footer{
+    padding-top: 2%;
+    padding-bottom: 1%;
+    text-align: center;
+}
+
+
+
+.lista_contacto{
+    list-style: none;
+    padding: 0%;
+    padding: 0% 0% 0% 30%;
+    
+}
+
+.lista_formacion{
+    list-style: none;
+    padding: 0%;
+    padding: 0% 0% 0% 30%;
+}
+
+
+#l_estudio1, #l_estudio2, #l_mai, #l_tele{
+    display: flex;
+    
+}
+
+.img_mail, .img_what{
+    margin-right: 1%;
+}
+
+#proyecto1{
+    background-color: #b8afaf;
+    margin: 3rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0.2rem 0.2rem #9b948b;
+    display: inline-flex;
+  }
+
+  #img_portafolio{
+    width: 45%;
+  }
+
+
+  #p_proyectos1{
+      margin: 7% 0% 0% 7%;
+  }
+/*EAB871  EA8E3C  C1A861  D37A4F  CC403E*/

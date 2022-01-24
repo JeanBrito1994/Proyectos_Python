@@ -1,0 +1,134 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static '/portafolioApp/css/estilo_index.css' %}">
+    <link rel="shortcut icon" href="static/portafolioApp/images/icono_inicio.jpg"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap">
+    <title>Portafolio Jean Pierre Brito</title>
+</head>
+
+
+
+
+<header>
+    
+    <nav class="menu">
+        <h1>Jean Brito</h1>
+        <ul>
+            <li><a href="#acerca_de">Sobre mi</a></li>
+            <li><a href="#proyecto">Proyectos</a></li>
+            <li><a href="#skille">Skills</a></li>
+            <li><a href="#formacion">Educación</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+    
+
+</header>
+
+<div id="acerca_de">
+        <div id="acerca_de_descripcion">
+            Mi nombre es Jean Pierre Brito Castro <br>
+            Soy un joven muy proactivo y autodidacta, me gusta aprender nuevas herramientas que me 
+            ayuden a solucionar problemas. Estudie adm. Financiera y luego trabajé en algunas empresas bajo este 
+            título, luego por vocación estudio analista programador, donde he realizado proyectos en java, Python con 
+            django, realizando paginas web con html, css y javascript y tambien he realizado algunos proyectos con C# .net <br>
+            Fuera de lo laboral me gusta el cine, me gustan los videojuegos, me gusta compartir con amigos y pasar un buen rato, asi como
+            también me encanta viajar y conocer nuevos lugares.
+        </div>
+        
+            <img class="Imagen_acerca" src="static/portafolioApp/images/Imagen_escritorio.png">
+</div>
+
+        <a download="CV Jean Brito" href="static/portafolioApp/docs/CV jean Pierre Brito ESP.pdf"><Button class="boton_descargar">Descargar CV</Button></a>
+        
+
+
+<body>
+<div id="proyecto">
+    <h1>Proyectos</h1>
+    <h2>Algunos proyectos que he realizado son:</h2>
+    <div id="proyectos">
+        <div id="proyecto1">
+            <img id="img_portafolio" src="static/portafolioApp/images/Portafolio_img.png">
+            <p id="p_proyectos1">Portafolio simple para mostrar algunos proyectos realizados y demostrar algunas aptitudes,
+                actualizandolo cada vez más. <br><br>
+                Python | Django | Html | CSS
+            </p>
+            
+        </div>
+        
+    </div>
+</div>
+    
+<h1 id="skille">Skills</h1>
+<h2>Herramientas y habilidades que utilizo</h2>
+<div id="skill">
+    
+    <div id="front">
+        <img id="img_front" src="static/portafolioApp/images/front.png">
+        <h2>Frontend</h2>
+        <p>
+            Html<br>
+            CSS<br>
+            bootstrap
+        </p>
+    </div>
+    <div id="back">
+        <img id="img_back" src="static/portafolioApp/images/back.png">
+        <h2>Backend</h2>
+        <p>
+            Javascript<br>
+            Python (Django)<br>
+            java<br>
+            C#
+        </p>
+    </div>
+    <div id="otros">
+        <img id="img_otros" src="static/portafolioApp/images/otros.png">
+        <h2>Otros</h2>
+        <p>
+            Metodologias agiles<br>
+            GIT<br>
+            OracleSQL<br>
+            MySQL<br>
+            Excel Avanzado<br>
+            Visual Basic
+        </p>
+    </div>
+</div>
+
+<div id="formacion">
+    <h1>Formación Academica</h1>
+    
+    <ul class="lista_formacion">
+    <li id="l_estudio1"><img src="static/portafolioApp/images/libro.png"><h3> Analista programador computacional<br>2019-2021 | Duoc UC | Vespertino</h3></li>
+    <li id="l_estudio2"><img src="static/portafolioApp/images/libro.png"><h3>Administración financiera<br>2013-2015 | Duoc UC | Diurno</h3></li>
+    </ul>
+</div>
+
+<div id="contacto">
+    <h1>Contacto</h1>
+    <ul class="lista_contacto">
+    <li id="l_mai"><img class="img_mail" src="static/portafolioApp/images/mail.png"><h3>jp.brito1994@gmail.com</h3></li>
+    <li id="l_tele"><img class="img_what" src="static/portafolioApp/images/whatsapp.png"><h3> +569 88968898</h3></li>
+    </ul>   
+</div>
+
+</body>
+
+
+<footer>
+    <div id="img_footer">
+    <a href="https://github.com/JeanBrito1994"><img class="img_git" src="static/portafolioApp/images/git.png"></a>
+    <a href="https://www.linkedin.com/in/jean-pierre-brito-c/"><img class="img_link" src="static/portafolioApp/images/linkedin.png"></a>
+    </div>
+<p id="creado">Creado por Jean Pierre brito</p>
+</footer>
+
+</html>
